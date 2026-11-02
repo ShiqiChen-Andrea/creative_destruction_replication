@@ -76,7 +76,7 @@ global cGray "140 140 140"
 * 1. Data construction
 *------------------------------------------------------------------------------
 * ---- 1a. Firm-age file: startups (age 0), young firms (0-5), alt young (0-2)
-import delimited "$data/bds2021_fa.csv", clear stringcols(_all)
+import delimited "bds2021_fa.csv", clear stringcols(_all)
 destring firms estabs emp, replace force          // "X" (suppressed) -> missing
 destring year, replace
 gen code = substr(fage, 1, 1)                     // a) 0, b) 1, c) 2, ... f) 5
@@ -109,7 +109,7 @@ preserve                                          // firms aged 0-2 (robustness)
 restore
 
 * ---- 1b. Aggregate file: merge and construct measures
-import delimited "$data/bds2021_aggregate.csv", clear
+import delimited "bds2021_aggregate.csv", clear
 sort year
 merge 1:1 year using `startups', nogenerate
 merge 1:1 year using `young',    nogenerate
