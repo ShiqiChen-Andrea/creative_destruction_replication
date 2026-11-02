@@ -3,8 +3,8 @@
 *
 * Research question: Has creative destruction in the US declined, 1980-2020?
 * Data: Census Bureau Business Dynamics Statistics (BDS), 2021 release
-*   data/bds2021_aggregate.csv   national aggregates
-*   data/bds2021_fa.csv          aggregates by firm age
+*   bds2021_aggregate.csv   national aggregates
+*   bds2021_fa.csv          aggregates by firm age
 *
 * Sections
 *   0  Setup, paths, graph style
@@ -13,8 +13,7 @@
 *   3  Tests of the "shift" hypothesis (e vs x), Newey-West trends, decomposition
 *   4  Figures
 *
-* Written for Stata 15 or later. NOT yet run by the author of this file:
-* compare your output with the reference values in the README.
+
 *
 * ---- Measurement decisions (document these in the research note) ------------
 *  - Window 1980-2019 for trends; 2020-21 are plotted but excluded from
